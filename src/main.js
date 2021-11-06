@@ -1,10 +1,17 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import pokemon from './pokemon-data.js'
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
+
+let data = {
+  pokemons: pokemon,
+  cart: []
+}
 
 new Vue({
   router,
-  render: (h) => h(App),
-}).$mount("#app");
+  data,
+  render: h => h(App)
+}).$mount('#app')
